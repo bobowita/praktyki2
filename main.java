@@ -45,62 +45,62 @@ import java.util.Scanner;
             categ.add("glues");
             categ.add("zipties");
             categ.add("tapes");
-    int ii = 0;
+            int ii = 0;
             System.out.println("czy chcesz założyc konto 1 nie 2 tak : ");
             Scanner sc2 = new Scanner(System.in);
             ii = sc2.nextInt();
-        switch (ii){
-            case 1:
-                System.out.println("lecisz bez konta");
-                break;
-            case 2:
-                Scanner scanner = new Scanner(System.in);
-                System.out.println("Wprowadź dane:");
-                System.out.println("Wprowadź imie:");
-                person.imie =  scanner.next();
-                System.out.println("Wprowadź nazwisko:");
-                person.nazwisko =  scanner.next();
-                System.out.println("haslo:");
-                person.haslo =  scanner.next();
-                person peep = new person(person.imie, person.nazwisko, person.haslo);
-                System.out.println("stworzyłeś konto");
-                break;
-        }
+            switch (ii) {
+                case 1:
+                    System.out.println("lecisz bez konta");
+                    break;
+                case 2:
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.println("Wprowadź dane:");
+                    System.out.println("Wprowadź imie:");
+                    person.imie = scanner.next();
+                    System.out.println("Wprowadź nazwisko:");
+                    person.nazwisko = scanner.next();
+                    System.out.println("haslo:");
+                    person.haslo = scanner.next();
+                    person peep = new person(person.imie, person.nazwisko, person.haslo);
+                    System.out.println("stworzyłeś konto");
+                    break;
+            }
 
             int categg = 0;
             System.out.println("wybierz kategorie");
             Scanner sc1 = new Scanner(System.in);
             for (int i = 0; i < categ.size(); i++) {
-                System.out.println(categ.get(i));}
+                System.out.println(categ.get(i));
+            }
             categg = sc1.nextInt();
 
             switch (categg) {
                 case 1:
-                    for (String hammer : hammers) {
-                        System.out.println(hammer);
+                    for (int i = 0; i < hammers.size(); i++) {
+                        System.out.println(hammers.get(i));
                     }
-                    
+
                 case 2:
-                    for (String item : glue) {
-                        System.out.println(item);
+                    for (int i = 0; i < glue.size(); i++) {
+                        System.out.println(glue.get(i));
                     }
 
                 case 3:
-                    for (String value : ziptie) {
-                        System.out.println(value);
+                    for (int i = 0; i < ziptie.size(); i++) {
+                        System.out.println(ziptie.get(i));
                     }
 
                 case 4:
-                    for (String s : tape) {
-                        System.out.println(s);}
+                    for (int i = 0; i < tape.size(); i++) {
+                        System.out.println(tape.get(i));
+                    }
+
+
             }
 
 
         }
-
-
-
-
     }
 /**
  * @autors Gruzdas Bartłomiej Dawid szemis
