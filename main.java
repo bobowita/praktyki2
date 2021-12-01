@@ -1,8 +1,12 @@
+package com.company;
+
+import com.company.person;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class main {
+public class main{
 
     public static void main(String[] args) {
 
@@ -81,57 +85,57 @@ public class main {
             }
             int categg = sc1.nextInt();
 
-        switch (categg) {
-            case 1:
-                for (int i = 0; i < hammers.size(); i++) {
-                System.out.println(hammers.get(i));
-                }
-                break;
-            case 2:
-                for (int i = 0; i < glue.size(); i++) {
-                System.out.println(glue.get(i));
-                }
-                break;
-            case 3:
-                for (int i = 0; i < ziptie.size(); i++) {
-                System.out.println(ziptie.get(i));
-                }
-                break;
-            case 4:
-                for (int i = 0; i < tape.size(); i++) {
-                System.out.println(tape.get(i));
-                }
-                break;
+            switch (categg) {
+                case 1:
+                    for (int i = 0; i < hammers.size(); i++) {
+                        System.out.println(hammers.get(i));
+                    }
+                    break;
+                case 2:
+                    for (int i = 0; i < glue.size(); i++) {
+                        System.out.println(glue.get(i));
+                    }
+                    break;
+                case 3:
+                    for (int i = 0; i < ziptie.size(); i++) {
+                        System.out.println(ziptie.get(i));
+                    }
+                    break;
+                case 4:
+                    for (int i = 0; i < tape.size(); i++) {
+                        System.out.println(tape.get(i));
+                    }
+                    break;
                 case 5:
-                exit = 1;
-                break;
+                    exit = 1;
+                    break;
             }
 
-        switch (categg) {
-            case 1:
-                System.out.println("podaj numer produktu : ");
-                int pr1 = sc3.nextInt();
-                System.out.println("dodałeś do koszyka : " + hammers.get(pr1 - 1));
-                koszyk.add(hammers.get(pr1 - 1));
-                break;
-            case 2:
-                System.out.println("podaj numer produktu : ");
-                int pr2 = sc3.nextInt();
-                System.out.println("dodałeś do koszyka : " + glue.get(pr2 - 1));
-                koszyk.add(glue.get(pr2 - 1));
-                break;
-            case 3:
-                System.out.println("podaj numer produktu : ");
-                int pr3 = sc3.nextInt();
-                System.out.println("dodałeś do koszyka : " + ziptie.get(pr3 - 1));
-                koszyk.add(ziptie.get(pr3 - 1));
-                break;
-            case 4:
-                System.out.println("podaj numer produktu : ");
-                int pr4 = sc3.nextInt();
-                System.out.println("dodałeś do koszyka : " + tape.get(pr4 - 1));
-                koszyk.add(tape.get(pr4 - 1));
-                break;
+            switch (categg) {
+                case 1:
+                    System.out.println("podaj numer produktu : ");
+                    int pr1 = sc3.nextInt();
+                    System.out.println("dodałeś do koszyka : " + hammers.get(pr1 - 1));
+                    koszyk.add(hammers.get(pr1 - 1));
+                    break;
+                case 2:
+                    System.out.println("podaj numer produktu : ");
+                    int pr2 = sc3.nextInt();
+                    System.out.println("dodałeś do koszyka : " + glue.get(pr2 - 1));
+                    koszyk.add(glue.get(pr2 - 1));
+                    break;
+                case 3:
+                    System.out.println("podaj numer produktu : ");
+                    int pr3 = sc3.nextInt();
+                    System.out.println("dodałeś do koszyka : " + ziptie.get(pr3 - 1));
+                    koszyk.add(ziptie.get(pr3 - 1));
+                    break;
+                case 4:
+                    System.out.println("podaj numer produktu : ");
+                    int pr4 = sc3.nextInt();
+                    System.out.println("dodałeś do koszyka : " + tape.get(pr4 - 1));
+                    koszyk.add(tape.get(pr4 - 1));
+                    break;
             }
         }
 

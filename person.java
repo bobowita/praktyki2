@@ -1,3 +1,5 @@
+package com.company;
+
 import java.util.Scanner;
 public class person {
 
@@ -5,8 +7,10 @@ public class person {
     private static String imie;
     private static String nazwisko;
     private String haslo;
-    private String kodp;
-    private String adres;
+    private static String kodp;
+    private static String adres;
+    private static String miasto;
+    private static double numer;
 
     public void setAcces(int newAcces) {
         this.acces = newAcces;
@@ -19,6 +23,13 @@ public class person {
     public String getNazwisko(String nazwisko){
         return nazwisko;
     }
+    public String getMiasto(String miasto){
+        return miasto;
+    }
+    public double getNumer(double numer){
+        return numer;
+    }
+
 
     public void setImie(String newImie) {
         this.imie = newImie;
@@ -39,6 +50,12 @@ public class person {
     public void setAdres(String newAdres) {
         this.adres = newAdres;
     }
+    public void setMiasto(String newMiasto) {
+        this.miasto = newMiasto;
+    }
+    public void setNumer(double newNumer) {
+        this.numer = newNumer;
+    }
 
     public static void logowanie() {
         person myObj = new person();
@@ -48,7 +65,7 @@ public class person {
 
         System.out.println("Wprowadź imie: ");
         myObj.setImie(scanner.next());
-        System.out.println("Twojr imie: "+ myObj.imie);
+        System.out.println("Twoje imie: "+ myObj.imie);
 
         System.out.println("Wprowadź nazwisko: ");
         myObj.setNazwisko(scanner.next());
