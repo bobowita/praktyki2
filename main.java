@@ -4,12 +4,7 @@ import java.util.Scanner;
 
 public class main extends person {
 
-    public main(int access, String imie, String nazwisko, String haslo) {
-        super(access, imie, nazwisko, haslo);
-    }
-
     public static void main(String[] args) {
-
 
 
         ArrayList<String> hammers = new ArrayList<String>();
@@ -43,56 +38,74 @@ public class main extends person {
         tape.add("cloth_tape");
 
         ArrayList<String> categ = new ArrayList<>();
-        categ.add("hammers");
-        categ.add("glues");
-        categ.add("zipties");
-        categ.add("tapes");
+        categ.add("1.hammers");
+        categ.add("2.glues");
+        categ.add("3.zipties");
+        categ.add("4.tapes");
+        categ.add("5.przejdz do koszyka");
 
         ArrayList<String> koszyk = new ArrayList<>();
 
+        int acc = 0;
+        int exit = 0;
+        Scanner sc1 = new Scanner(System.in);
+        Scanner sc2 = new Scanner(System.in);
+        Scanner sc3 = new Scanner(System.in);
+        Scanner sc4 = new Scanner(System.in);
 
         System.out.println("czy chcesz założyc konto 1 nie 2 tak : ");
-        Scanner sc2 = new Scanner(System.in);
         int ii = sc2.nextInt();
+
+        if (ii >= 1 & ii <=2){
+            System.out.println("wszystko git");
+        } else {
+            System.out.println("zepsuleś");
+            System.exit(1);
+        }
+
         switch (ii) {
             case 1:
                 System.out.println("lecisz bez konta");
                 break;
             case 2:
-                Scanner scanner = new Scanner(System.in);
-                konto(scanner);
+                acc = 1;
+                logowanie();
                 break;
         }
 
-        System.out.println("wybierz kategorie");
-        Scanner sc1 = new Scanner(System.in);
-        for (int i = 0; i < categ.size(); i++) {
-            System.out.println(categ.get(i));
-        }
-        int categg = sc1.nextInt();
+        while (exit == 0) {
+
+            System.out.println("wybierz kategorie");
+            for (int i = 0; i < categ.size(); i++) {
+                System.out.println(categ.get(i));
+            }
+            int categg = sc1.nextInt();
 
         switch (categg) {
             case 1:
                 for (int i = 0; i < hammers.size(); i++) {
-                    System.out.println(hammers.get(i));}
+                System.out.println(hammers.get(i));
+                }
                 break;
             case 2:
                 for (int i = 0; i < glue.size(); i++) {
-                    System.out.println(glue.get(i));}
+                System.out.println(glue.get(i));
+                }
                 break;
             case 3:
                 for (int i = 0; i < ziptie.size(); i++) {
-                    System.out.println(ziptie.get(i));}
+                System.out.println(ziptie.get(i));
+                }
                 break;
             case 4:
                 for (int i = 0; i < tape.size(); i++) {
-                    System.out.println(tape.get(i));}
+                System.out.println(tape.get(i));
+                }
                 break;
-
-        }
-
-        Scanner sc3 = new Scanner(System.in);
-        System.out.println("podaj kategorie produktu który czhesz zamówić");
+                case 5:
+                exit = 1;
+                break;
+            }
 
         switch (categg) {
             case 1:
@@ -119,25 +132,39 @@ public class main extends person {
                 System.out.println("dodałeś do koszyka : " + tape.get(pr4 - 1));
                 koszyk.add(tape.get(pr4 - 1));
                 break;
+            }
         }
+
+        koszyk.get(0);
+        System.out.println("twoje produkty: ");
+
         for (int i = 0; i < koszyk.size(); i++) {
-            System.out.println(koszyk.get(i) + "ehh");}
+            System.out.println(koszyk.get(i));}
+
+        System.out.println("czy chesz złożyć zamówienie: ");
+        System.out.println("1 tak 2 nie");
+        int wybur = 0;
+        wybur = sc4.nextInt();
+
+        switch (wybur){
+            case 1:
+                if (acc == 1){
+                    dane();
+                } else {
+                    logowanie();
+                }
+                break;
+            case 2:
+                System.out.println("anulowano zamowienie");
+                System.exit(1);
+                break;
+        }
 
 
 
 
-    }
 
-    private static void konto(Scanner scanner) {
-        System.out.println("Wprowadź dane:");
-        System.out.println("Wprowadź imie:");
-        person.imie = scanner.next();
-        System.out.println("Wprowadź nazwisko:");
-        person.nazwisko = scanner.next();
-        System.out.println("haslo:");
-        person.haslo = scanner.next();
-        person peep = new person(person.imie, person.nazwisko, person.haslo);
-        System.out.println("stworzyłeś konto");
+
     }
 }
 /**
