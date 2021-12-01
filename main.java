@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class main extends person {
+public class main {
 
     public static void main(String[] args) {
 
@@ -69,7 +69,7 @@ public class main extends person {
                 break;
             case 2:
                 acc = 1;
-                logowanie();
+                person.logowanie();
                 break;
         }
 
@@ -149,9 +149,9 @@ public class main extends person {
         switch (wybur){
             case 1:
                 if (acc == 1){
-                    dane();
+                    person.dane();
                 } else {
-                    logowanie();
+                    person.logowanie();
                 }
                 break;
             case 2:
