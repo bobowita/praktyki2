@@ -1,1 +1,1 @@
-# praktyki2
+projekt sklepu w konsoli 
