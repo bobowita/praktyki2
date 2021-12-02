@@ -38,12 +38,21 @@ public class main {
         tape.add("double-sided_tape");
         tape.add("cloth_tape");
 
+        ArrayList<String> brazing = new ArrayList<>();
+        brazing.add("propane torch");
+        brazing.add("jewelery mat");
+        brazing.add("brazing rods");
+        brazing.add("black flux");
+        brazing.add("propane canister");
+        brazing.add("torch nozzle 0.12mm");
+
         ArrayList<String> categ = new ArrayList<>();
         categ.add("1.hammers");
         categ.add("2.glues");
         categ.add("3.zipties");
         categ.add("4.tapes");
-        categ.add("5.przejdz do koszyka");
+        categ.add("5.brazing stuff");
+        categ.add("6.przejdz do koszyka");
 
         ArrayList<String> koszyk = new ArrayList<>();
 
@@ -94,7 +103,12 @@ public class main {
                 System.out.println(tape.get(i));
                 }
                 break;
-                case 5:
+            case 5:
+                for (int i = 0; i < brazing.size(); i++) {
+                System.out.println(brazing.get(i));
+                }
+                break;
+            case 6:
                 exit = 1;
                 break;
             }
@@ -123,6 +137,12 @@ public class main {
                 int pr4 = sc3.nextInt();
                 System.out.println("dodałeś do koszyka : " + tape.get(pr4 - 1));
                 koszyk.add(tape.get(pr4 - 1));
+                break;
+            case 5:
+                System.out.println("podaj numer produktu : ");
+                int pr5 = sc3.nextInt();
+                System.out.println("dodałeś do koszyka : " + brazing.get(pr5 - 1));
+                koszyk.add(tape.get(pr5 - 1));
                 break;
             }
         }
@@ -156,12 +176,7 @@ public class main {
         }
 
 
-
-
-
-
     }
-    //voidy
 }
 
 

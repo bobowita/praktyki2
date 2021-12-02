@@ -25,8 +25,6 @@ public class sklep {
             case 3:
                 System.out.println("zaluguj się");
                 sklep.log();
-            case 4:
-                break;
             default:
                 System.out.println("podaj liczbe 1 2 lub 3");
                 sklep.wyb();
@@ -35,37 +33,42 @@ public class sklep {
 
     public static void log() {
         Scanner sc5 = new Scanner(System.in);
+        Scanner sc6 = new Scanner(System.in);
+        String budyn = "";
         System.out.println("podaj login: ");
         sklep.logg = sc5.nextLine();
         System.out.println("podaj haslo: ");
         sklep.haslo = sc5.nextLine();
 
 
-        if (logg.equals("budyn") && haslo.equals("ofca")) {
-            access = 1;
-            System.out.println("jesteś zalogowany");
-            System.out.println("ustawienia 1 przejdz do sklepu 2");
-            sklep.xd = sc5.nextInt();
+    if (logg.equals("budyn") && haslo.equals("ofca")) {
+        access = 1;
+        System.out.println("jesteś zalogowany");
+        System.out.println("ustawienia 1 przejdz do sklepu 2");
+        sklep.xd = sc5.nextInt();
 
-            switch (sklep.xd) {
-                case 1:
-                    System.out.println("wybierz kategorie");
-                    int xd = 0;
-                    xd = sc5.nextInt();
-                    switch (xd){
-                        case 1:
+        switch (sklep.xd) {
+            case 1:
+                System.out.println("wybierz kategorie");
+                int xd = 0;
+                xd = sc5.nextInt();
 
-                        case 2:
+                switch (xd){
+                    case 1:
+                        System.out.println("wpisz nazwe produktu");
+                        budyn = sc6.next();
+                    case 2:
 
-                        case 3:
+                    case 3:
 
-                        case 4:
-                    }
+                    case 4:
+                }
                 case 2:
                     System.out.println("przenosze do sklepu");
             }
         } else {
             System.out.println("wrong login or password");
+            log();
         }
     }
 }

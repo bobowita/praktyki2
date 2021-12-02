@@ -80,6 +80,7 @@ public class person {
         System.out.println("Wprowadź imie: ");
         myObj.setImie(scanner.next());
         System.out.println("Twojr imie: "+ myObj.imie);
+        sklep.login.add(myObj.imie);
 
         System.out.println("Wprowadź nazwisko: ");
         myObj.setNazwisko(scanner.next());
@@ -87,6 +88,7 @@ public class person {
 
         System.out.println("Wprowadź haslo: ");
         myObj.setHaslo(scanner.next());
+        sklep.login.add(myObj.haslo);
 
         System.out.println("Wprowadź kod pocztowy: ");
         myObj.setKodp(scanner.next());
