@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class person {
 
     private int acces = 0;
@@ -64,6 +65,12 @@ public class person {
         this.numer = newNumer;
     }
 
+    /**
+     * author Gruzdas Bartłomiej
+     * pram string
+     * słuzy do pobierania informacji od uzytkownika w celu zalozenia konkt
+     */
+
     public static void logowanie() {
         person myObj = new person();
         Scanner scanner = new Scanner(System.in);
@@ -98,6 +105,11 @@ public class person {
         System.out.println("Twoju numer: "+ myObj.numer);
     }
 
+    /**
+     * authors dawid szemis
+     * metoda przekazuje dane nowemu obiektowi i pokazuje je przy skladaniu zamuwienia
+     * pram string
+     */
     public static void dane() {
         person dann = new person();
         dann.getImie(imie);
