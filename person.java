@@ -1,16 +1,14 @@
-package com.company;
-
 import java.util.Scanner;
 public class person {
 
     private int acces = 0;
     private static String imie;
     private static String nazwisko;
-    private String haslo;
+    private static String haslo;
     private static String kodp;
     private static String adres;
     private static String miasto;
-    private static double numer;
+    private static String numer;
 
     public void setAcces(int newAcces) {
         this.acces = newAcces;
@@ -23,13 +21,21 @@ public class person {
     public String getNazwisko(String nazwisko){
         return nazwisko;
     }
+
     public String getMiasto(String miasto){
         return miasto;
     }
-    public double getNumer(double numer){
+    public String getNumer(String numer){
         return numer;
     }
 
+    public String getAdres(String adres){
+        return adres;
+    }
+
+    public String getKodp(String kodp){
+        return kodp;
+    }
 
     public void setImie(String newImie) {
         this.imie = newImie;
@@ -50,10 +56,11 @@ public class person {
     public void setAdres(String newAdres) {
         this.adres = newAdres;
     }
+
     public void setMiasto(String newMiasto) {
         this.miasto = newMiasto;
     }
-    public void setNumer(double newNumer) {
+    public void setNumer(String newNumer) {
         this.numer = newNumer;
     }
 
@@ -65,7 +72,7 @@ public class person {
 
         System.out.println("Wprowadź imie: ");
         myObj.setImie(scanner.next());
-        System.out.println("Twoje imie: "+ myObj.imie);
+        System.out.println("Twojr imie: "+ myObj.imie);
 
         System.out.println("Wprowadź nazwisko: ");
         myObj.setNazwisko(scanner.next());
@@ -81,6 +88,14 @@ public class person {
         System.out.println("Wprowadź adres: ");
         myObj.setAdres(scanner.next());
         System.out.println("Twoj adres: "+ myObj.adres);
+
+        System.out.println("Wprowadź miasto: ");
+        myObj.setMiasto(scanner.next());
+        System.out.println("Twoje miasto: "+ myObj.miasto);
+
+        System.out.println("Wprowadź numer telefonu: ");
+        myObj.setNumer(scanner.next());
+        System.out.println("Twoju numer: "+ myObj.numer);
     }
 
     public static void dane() {
@@ -90,6 +105,22 @@ public class person {
 
         dann.getNazwisko(nazwisko);
         System.out.println(dann.getNazwisko(nazwisko));
+
+        dann.getMiasto(miasto);
+        System.out.println(dann.getMiasto(miasto));
+
+        dann.getAdres(adres);
+        System.out.println(dann.getAdres(adres));
+
+        dann.getKodp(kodp);
+        System.out.println(dann.getKodp(kodp));
+
+        dann.getKodp(kodp);
+        System.out.println(dann.getKodp(kodp));
+
+        dann.getNumer(numer);
+        System.out.println(dann.getNumer(numer));
+
     }
 
 

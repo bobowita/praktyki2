@@ -1,12 +1,8 @@
-package com.company;
-
-import com.company.person;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class main{
+public class main {
 
     public static void main(String[] args) {
 
@@ -157,6 +153,10 @@ public class main{
                 } else {
                     person.logowanie();
                 }
+                System.out.println("twoje założenie zostało złożone");
+                int randomNum = (int)(Math.random() * 1001);  // 0 to 1000
+                System.out.println("twoje konto zostalo obciążone kwotą: " + randomNum);
+
                 break;
             case 2:
                 System.out.println("anulowano zamowienie");
