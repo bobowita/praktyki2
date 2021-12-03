@@ -79,7 +79,7 @@ public class person {
 
         System.out.println("Wprowadź imie: ");
         myObj.setImie(scanner.next());
-        System.out.println("Twojr imie: "+ myObj.imie);
+        System.out.println("Twoje imie: "+ myObj.imie);
         sklep.login.add(myObj.imie);
 
         System.out.println("Wprowadź nazwisko: ");
@@ -104,12 +104,12 @@ public class person {
 
         System.out.println("Wprowadź numer telefonu: ");
         myObj.setNumer(scanner.next());
-        System.out.println("Twoju numer: "+ myObj.numer);
+        System.out.println("Twój numer: "+ myObj.numer);
     }
 
     /**
-     * authors dawid szemis
-     * metoda przekazuje dane nowemu obiektowi i pokazuje je przy skladaniu zamuwienia
+     * author dawid szemis
+     * metoda przekazuje dane nowemu obiektowi i pokazuje je przy skladaniu zamówienia
      * pram string
      */
     public static void dane() {

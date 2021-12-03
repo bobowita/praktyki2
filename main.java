@@ -9,42 +9,42 @@ public class main {
 
 
         ArrayList<String> hammers = new ArrayList<>();
-        hammers.add("ślusarski");
-        hammers.add("kamieniarski");
-        hammers.add("sledgehammer");
-        hammers.add("wooden_mallet");
-        hammers.add("rubber_mallet");
+        hammers.add("1.ślusarski");
+        hammers.add("2.kamieniarski");
+        hammers.add("3.sledgehammer");
+        hammers.add("4.wooden_mallet");
+        hammers.add("5.rubber_mallet");
 
         ArrayList<String> glue = new ArrayList<>();
-        glue.add("poxipux");
-        glue.add("white_wood_glue");
-        glue.add("yellow_wood_glue");
-        glue.add("butaprun");
-        glue.add("cyanoacril");
+        glue.add("1.poxipux");
+        glue.add("2.white_wood_glue");
+        glue.add("3.yellow_wood_glue");
+        glue.add("4.butaprun");
+        glue.add("5.cyanoacril");
 
         ArrayList<String> ziptie = new ArrayList<>();
-        ziptie.add("20cm_pink");
-        ziptie.add("30cm_pink");
-        ziptie.add("20cm_black");
-        ziptie.add("30cm_black");
-        ziptie.add("20cm_white");
-        ziptie.add("30cm_white");
+        ziptie.add("1.20cm_pink");
+        ziptie.add("2.30cm_pink");
+        ziptie.add("3.20cm_black");
+        ziptie.add("4.30cm_black");
+        ziptie.add("5.20cm_white");
+        ziptie.add("6.30cm_white");
 
         ArrayList<String> tape = new ArrayList<>();
-        tape.add("packing_tape");
-        tape.add("masking_tape");
-        tape.add("electrical_tape");
-        tape.add("Duct_tape");
-        tape.add("double-sided_tape");
-        tape.add("cloth_tape");
+        tape.add("1.packing_tape");
+        tape.add("2.masking_tape");
+        tape.add("3.electrical_tape");
+        tape.add("4.Duct_tape");
+        tape.add("5.double-sided_tape");
+        tape.add("6.cloth_tape");
 
         ArrayList<String> brazing = new ArrayList<>();
-        brazing.add("propane torch");
-        brazing.add("jewelery mat");
-        brazing.add("brazing rods");
-        brazing.add("black flux");
-        brazing.add("propane canister");
-        brazing.add("torch nozzle 0.12mm");
+        brazing.add("1.propane torch");
+        brazing.add("2.jewelery mat");
+        brazing.add("3.brazing rods");
+        brazing.add("4.black flux");
+        brazing.add("5.propane canister");
+        brazing.add("6.torch nozzle 0.12mm");
 
         ArrayList<String> categ = new ArrayList<>();
         categ.add("1.hammers");
@@ -67,8 +67,8 @@ public class main {
             sklep.wyb();
         } catch (InputMismatchException x){
             System.out.println("Wprowadziłeś zły znak");
-            System.out.println("1.kontynułuj bez konta");
-            System.out.println("2.stwurz konto");
+            System.out.println("1.kontynuuj bez konta");
+            System.out.println("2.stwórz konto");
             System.out.println("3.zaloguj się");
             sklep.wyb();
         }
@@ -165,7 +165,7 @@ public class main {
                     person.logowanie();
                 }
                 System.out.println("twoje założenie zostało złożone");
-                int randomNum = (int)(Math.random() * 101);  // 0 to 1000
+                int randomNum = (int)(Math.random() * 101);  // 0 to 100
                 System.out.println("twoje konto zostalo obciążone kwotą: " + randomNum);
 
                 break;
