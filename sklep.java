@@ -14,7 +14,7 @@ public class sklep {
 
     /**
      * author szemis dawid
-     * metoda pyta sie uzytkownika co chce wybrać z 3 opcji i sprawdza czy nie podał czegoś źle
+     * metoda pyta sie urzytkownika co chce wybrać z 3 opcji i sprawdza czy nie podał czegoś źle
      */
     public static void wyb() {
         Scanner sc2 = new Scanner(System.in);
@@ -28,17 +28,17 @@ public class sklep {
                 person.logowanie();
                 break;
             case 3:
-                System.out.println("zaloguj się");
+                System.out.println("zaluguj się");
                 sklep.log();
             default:
-                System.out.println("podaj liczbe 1, 2 lub 3");
+                System.out.println("podaj liczbe 1 2 lub 3");
                 sklep.wyb();
         }
     }
 
     /**
      * author gruzdas bartłomiej
-     * metoda sluzy do logowania po podaniu hasła i loginu
+     *metoda sluzy do logowania po podaniu hasła i loginu
      * i sprawdza czy uzytkownik to administrator
      */
     public static void log() {
@@ -73,12 +73,12 @@ public class sklep {
 
                     case 4:
                 }
-                case 2:
+            */    case 2:
                    System.out.println("przenosze do sklepu");
-           */  }
+             }
 
         } else {
-            System.out.println("niepoprawny login lub hasło");
+            System.out.println("wrong login or password");
             log();
         }
     }
