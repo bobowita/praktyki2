@@ -142,7 +142,7 @@ public class main {
                 System.out.println("podaj numer produktu : ");
                 int pr5 = sc3.nextInt();
                 System.out.println("dodałeś do koszyka : " + brazing.get(pr5 - 1));
-                koszyk.add(tape.get(pr5 - 1));
+                koszyk.add(brazing.get(pr5 - 1));
                 break;
             }
         }
