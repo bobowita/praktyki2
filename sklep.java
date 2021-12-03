@@ -11,6 +11,11 @@ public class sklep {
     public static int access = 0;
     public static int xd = 0;
 
+
+    /**
+     * author szemis dawid
+     * metoda pyta sie urzytkownika co chce wybrać z 3 opcji i sprawdza czy nie podał czegoś źle
+     */
     public static void wyb() {
         Scanner sc2 = new Scanner(System.in);
         int ii = sc2.nextInt();
@@ -31,6 +36,11 @@ public class sklep {
         }
     }
 
+    /**
+     * author gruzdas bartłomiej
+     *metoda sluzy do logowania po podaniu hasła i loginu
+     * i sprawdza czy uzytkownik to administrator
+     */
     public static void log() {
         Scanner sc5 = new Scanner(System.in);
         Scanner sc6 = new Scanner(System.in);
@@ -53,7 +63,7 @@ public class sklep {
                 int xd = 0;
                 xd = sc5.nextInt();
 
-                switch (xd){
+              /*  switch (xd){
                     case 1:
                         System.out.println("wpisz nazwe produktu");
                         budyn = sc6.next();
@@ -64,8 +74,9 @@ public class sklep {
                     case 4:
                 }
                 case 2:
-                    System.out.println("przenosze do sklepu");
-            }
+                   System.out.println("przenosze do sklepu");
+           */  }
+
         } else {
             System.out.println("wrong login or password");
             log();
